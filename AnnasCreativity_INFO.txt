@@ -1,0 +1,18 @@
+3 Buttons
+Choose Audio File - done
+Save Location - done
+Start Recording - done
+
+3 Text boxes
+Audio Speed
+Start Countdown
+Total Record Time
+
+
+LOGIC
+set save lcoation
+play back audio based on chosen speed
+dispaly countdown to start
+display countdown to end
+combine the audio file with the cideo clip
+

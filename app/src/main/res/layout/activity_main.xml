@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_columnWeight="1"
+             android:orientation="vertical"
+             android:paddingBottom="@dimen/activity_vertical_margin"
+             android:paddingLeft="@dimen/activity_horizontal_margin"
+             android:paddingRight="@dimen/activity_horizontal_margin"
+             android:paddingTop="@dimen/activity_vertical_margin"
+             tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/textView_Count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#4DFF0000"
+        android:textSize="100sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_controlParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/ll_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/button_ChooseAudioFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:onClick="onChooseAudioFileClick"
+                android:text="@string/btnChooseAudioFile"
+                android:textColor="@android:color/holo_red_light"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Audio Speed"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"/>
+
+                <EditText
+                    android:id="@+id/editText_AudioSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:text="1.0"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/button_capture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:enabled="false"
+                android:onClick="onRecordStopClick"
+                android:text="@string/btnCapture"
+                android:textColor="@android:color/holo_red_light"/>
+
+            <Button
+                android:id="@+id/button_Resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:enabled="false"
+                android:onClick="onResumeClick"
+                android:text="Resume"
+                android:textColor="@android:color/holo_red_light"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_videosettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/ll_videoCountdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Count Down Start"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"/>
+
+                <EditText
+                    android:id="@+id/editText_CountDownStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_videoTotalTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".50"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Count Down Finish"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"/>
+
+                <EditText
+                    android:id="@+id/editText_CountDownFinish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
